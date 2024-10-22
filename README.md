@@ -1,6 +1,7 @@
 # Dataset
 [1]. Helmet Detection: [Link](https://universe.roboflow.com/checkhelmet/helmetcheck/dataset/1)  
 [2]. Glasses Detection: [Link](https://universe.roboflow.com/pupildec/glasses-detection-1k2dp)  
+[3]. Human Detection: [Link](https://universe.roboflow.com/mlai-machine-learning/mlaidetection)
 
 # Project Structure
 ```
@@ -35,4 +36,8 @@ python train.py --img 416 --batch 32 --epochs 12 --data ../dataset/data.yaml --w
 To convert the model to TFLite format, use the command:
 ```bash
 python export.py --weights runs/train/exp6/weights/best.pt --include tflite --int8 --img 416 --data ../dataset/data.yaml
+```
+
+```bash
+python export.py --weights runs/train/exp6/weights/best.pt --include tflite --tf-nms --agnostic-nms
 ```
