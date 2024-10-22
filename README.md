@@ -24,7 +24,11 @@ val: ../../dataset/valid/images
 # Training Instructions
 To train the model, run the following command:
 ```bash
-python train.py --img 640 --batch 32 --epochs 25 --data ../dataset/data.yaml --weights yolov5s.pt
+python train.py --img 640 --batch 32 --epochs 25 --data ../dataset/data.yaml --weights yolov5s.pt 
+```
+or
+```bash
+python train.py --img 416 --batch 32 --epochs 12 --data ../dataset/data.yaml --weights yolov5s.pt
 ```
 
 # Convert to TFLite
